@@ -100,7 +100,7 @@ const following = {
   // 2018-08-25 14h16
   1678267: { id: 1678267, login: 'devsepaq' },
   // 2018-08-25 16h00
-  34557455: { id: 34557455, login: 'krishnasubramani' },
+  34557455: { id: 34557455, login: 'krishnasubramani' },
   // 2018-08-25 17h50
   8812813: { id: 8812813, login: 'PhilBoileau' },
   // 2018-08-25 17h50
@@ -156,7 +156,7 @@ const following = {
   36831295: { id: 36831295, login: 'vbordalo' },
   2625886: { id: 2625886, login: 'ggirard07' },
   2342405: { id: 2342405, login: 'mirsaeedi' },
-  18427998: { id: 18427998, login: 'xanderhades'  },
+  18427998: { id: 18427998, login: 'xanderhades' },
   22452192: { id: 22452192, login: 'srsohn' },
   13615467: { id: 13615467, login: 'VinceLambert' },
   14182238: { id: 14182238, login: 'marechal-p' },
@@ -254,41 +254,41 @@ const follow = (d) => {
       })
       .end()
   })
-  .then((d) => new Promise((resolve, reject) => {
-    hq(u, { headers }, (err, res) => {
-      if (err) {
-        console.error('FOLLOW-confirm ERR:', err)
-        return reject(err)
-      }
-      console.log('follow-step2', d.login, res.statusCode) // expect 204
-      if (res.statusCode === 204) {
-        following[d.id] = Object.assign({}, d)
-        return resolve({
-          login: d.login,
-          statusCode1: d.statusCode,
-          statusCode2: res.statusCode
-        })
-      }
+    .then((d) => new Promise((resolve, reject) => {
+      hq(u, { headers }, (err, res) => {
+        if (err) {
+          console.error('FOLLOW-confirm ERR:', err)
+          return reject(err)
+        }
+        console.log('follow-step2', d.login, res.statusCode) // expect 204
+        if (res.statusCode === 204) {
+          following[d.id] = Object.assign({}, d)
+          return resolve({
+            login: d.login,
+            statusCode1: d.statusCode,
+            statusCode2: res.statusCode
+          })
+        }
 
-      if (res.statusCode === 404) {
-        const d2 = Object.assign({}, d)
-        d2.blockedBy = true
-        following[d.id] = d2
-        return resolve({
-          blockedBy: true,
-          id: d.id,
-          login: d.login,
-          statusCode1: d.statusCode,
-          statusCode2: res.statusCode
-        })
-      }
-      return reject(new Error(`Unexpected status code: ${res.statusCode}`))
+        if (res.statusCode === 404) {
+          const d2 = Object.assign({}, d)
+          d2.blockedBy = true
+          following[d.id] = d2
+          return resolve({
+            blockedBy: true,
+            id: d.id,
+            login: d.login,
+            statusCode1: d.statusCode,
+            statusCode2: res.statusCode
+          })
+        }
+        return reject(new Error(`Unexpected status code: ${res.statusCode}`))
 
       // following[d.id] = { id: d.id, login: d.login }
       // following[d.id] = simpler(d)
       // resolve({ login: d.login, statusCode1: d.statusCode, statusCode2: res.statusCode })
-    })
-  }))
+      })
+    }))
 /*
   .then(({ login, statusCode }) => {
     return { login, statusCode }
@@ -311,10 +311,10 @@ const loop = () => searchUsers(query)
     return Promise.all(toFollow.map(tFollow))
     // return { toFollow, alreadyFollow, renamed }
   })
-//  .then(({ toFollow, alreadyFollow, renamed }) => {
+  //  .then(({ toFollow, alreadyFollow, renamed }) => {
   .then((x) => {
     console.log('X:', x.length, x.slice(0, 30))
-/*
+    /*
     console.log('toFollow:', toFollow.length, toFollow)
     console.log('alreadyFollow:', alreadyFollow.length, alreadyFollow)
     console.log('renamed:', renamed.length, renamed)
