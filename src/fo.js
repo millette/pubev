@@ -126,22 +126,34 @@ const following = {
   // 2018-08-25 22h54
   39058840: { id: 39058840, login: 'AntoineLegare' },
 
-  // Next check
+  // 2018-08-25 23h26
   30874966: { id: 30874966, login: 'jifbrodeur' },
+  // 2018-08-25 23h26
   32043245:{ id: 32043245, login: 'madoyon' },
+  // 2018-08-25 23h26
   23446793: { id: 23446793, login: 'sbelharbi' },
-  */
 
-  // old blocks
+  // 2018-08-25 23h35
   26785194: { id: 26785194, login: 'ashu6811' },
+  // 2018-08-25 23h35
   28959453: { id: 28959453, login: 'RamiKhalil' },
+  // 2018-08-25 23h35
   39995531: { id: 39995531, login: 'JPLarouche' },
+
+  // 2018-08-25 23h46
   30480951: { id: 30480951, login: 'gabrielkarras' },
+  // 2018-08-25 23h46
   31040756: { id: 31040756, login: 'Moo-Marc' },
+  // 2018-08-25 23h46
   35788041: { id: 35788041, login: 'anolapalme' },
+
+  // Next check
   35875790: { id: 35875790, login: 'AnaVictoriaLu' },
   36213682: { id: 36213682, login: 'kimnng' },
   41904070: { id: 41904070, login: 'jomtl' },
+  */
+
+  // old blocks
   10710596: { id: 10710596, login: 'Shmeve' },
   2364632: { id: 2364632, login: 'ngrigoriev' },
   32909203: { id: 32909203, login: 'KevinMwa' },
@@ -296,7 +308,7 @@ const follow = (d) => {
 */
 }
 
-const tFollow = pThrottle(follow, 5, 9000) // 5 or 12
+const tFollow = pThrottle(follow, 1, 37000) // 5 or 12
 
 const loop = () => searchUsers(query)
   .then((x) => {
