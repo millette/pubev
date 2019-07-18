@@ -34,154 +34,63 @@ const query = { o: { location, type: 'user' }, order: 'asc', sort: 'joined' }
 
 // blocked by these users
 const following = {
-  // new blocks
-  // 2018-08-25 16h00
-  719796: { id: 719796, login: 'mathdeziel' },
-
-  // confirmed blocks
-  // 2018-08-24 12h15
-  24948522: { id: 24948522, login: 'hfakouri' },
-  // 2018-08-24 12h15
-  6589067: { id: 6589067, login: 'bananemure' },
-  // 2018-08-24 21h42
-  29841989: { id: 29841989, login: 'mounirch13' },
-  // 2018-08-24 21h42
-  3092838: { id: 3092838, login: 'gaudreaujacksoncharles' },
-  // 2018-08-24 21h55
+  457296: { id: 457296, login: 'michaelpaquette' },
+  615440: { id: 615440, login: 'danielricci' },
   505688: { id: 505688, login: 'psyomn' },
-  // 2018-08-24 21h55
-  25057940: { id: 25057940, login: 'vaquierm' },
-  // 2018-08-24 22h52
-  6231440: { id: 6231440, login: 'jacobrs' },
-  // 2018-08-24 22h52
-  11443637: { id: 11443637, login: 'Paramethod' },
-  // 2018-08-25 13h03
-  7477547: { id: 7477547, login: 'SKhoo' },
-  // 2018-08-25 13h03
-  9411699: { id: 9411699, login: 'drew7721' },
-  // 2018-08-25 14h05
-  5426916: { id: 5426916, login: 'robotustra' },
-  // 2018-08-25 14h05
-  7634110: { id: 7634110, login: 'Makabey' },
-  // 2018-08-25 14h16
-  25408746: { id: 25408746, login: 'cgtcc' },
-  // 2018-08-25 15h51
-  7339076: { id: 7339076, login: 'dannycolin' },
-  // 2018-08-25 15h51
-  18422723: { id: 18422723, login: 'alishobeiri' },
-  // 2018-08-25 16h00
-  24725635: { id: 24725635, login: 'sebastiancastroobando' },
-
-  // 2018-08-25 16h47
-  33403539: { id: 33403539, login: 'arnaveenkumar' },
-  // 2018-08-25 16h47
-  16778995: { id: 16778995, login: 'offol' },
-  // 2018-08-25 16h47
-  10172301: { id: 10172301, login: 'tommyforlini' },
-
-  // 2018-08-25 16h55
-  5527618: { id: 5527618, login: 'aLoneStrider' },
-  // 2018-08-25 16h55
-  35378512: { id: 35378512, login: 'john412smith' },
-  // 2018-08-25 16h55
-  35871757: { id: 35871757, login: '0xc0ffeee' },
-
-  // 2018-08-25 20h15
-  11246769: { id: 11246769, login: 'hallshouse' },
-
-  // 2018-08-25 22h54
-  9595728: { id: 9595728, login: 'dt-rush' },
-
-  /*
-  // 2018-08-24 15h
-  20388583: { id: 20388583, login: 'pbgnz' },
-  // 2018-08-24 15h
-  27744779: { id: 27744779, login: 'smbatchouAI' },
-  // 2018-08-25 14h16
-  1678267: { id: 1678267, login: 'devsepaq' },
-  // 2018-08-25 16h00
-  34557455: { id: 34557455, login: 'krishnasubramani' },
-  // 2018-08-25 17h50
-  8812813: { id: 8812813, login: 'PhilBoileau' },
-  // 2018-08-25 17h50
-  31141151: { id: 31141151, login: 'MincuTudor' },
-  // 2018-08-25 17h50
-  37969996: { id: 37969996, login: 'ntaff' },
-
-  // 2018-08-25 20h15
-  37510886: { id: 37510886, login: 'leaveswoods' },
-  // 2018-08-25 20h15
-  30392487:{ id: 30392487, login: 'Jobine23' },
-
-  // 2018-08-25 20h27
-  30525912: { id: 30525912, login: 'PranavBhatia' },
-  // 2018-08-25 20h27
-  30784101: { id: 30784101, login: 'jcj2249' },
-  // 2018-08-25 20h27
-  33300743: { id: 33300743, login: 'AlexandreKang' },
-
-  // 2018-08-25 22h54
-  38704826: { id: 38704826, login: 'soureya' },
-
-  // 2018-08-25 22h54
-  39058840: { id: 39058840, login: 'AntoineLegare' },
-
-  // 2018-08-25 23h26
-  30874966: { id: 30874966, login: 'jifbrodeur' },
-  // 2018-08-25 23h26
-  32043245:{ id: 32043245, login: 'madoyon' },
-  // 2018-08-25 23h26
-  23446793: { id: 23446793, login: 'sbelharbi' },
-
-  // 2018-08-25 23h35
-  26785194: { id: 26785194, login: 'ashu6811' },
-  // 2018-08-25 23h35
-  28959453: { id: 28959453, login: 'RamiKhalil' },
-  // 2018-08-25 23h35
-  39995531: { id: 39995531, login: 'JPLarouche' },
-
-  // 2018-08-25 23h46
-  30480951: { id: 30480951, login: 'gabrielkarras' },
-  // 2018-08-25 23h46
-  31040756: { id: 31040756, login: 'Moo-Marc' },
-  // 2018-08-25 23h46
-  35788041: { id: 35788041, login: 'anolapalme' },
-
-  // Next check
-  35875790: { id: 35875790, login: 'AnaVictoriaLu' },
-  36213682: { id: 36213682, login: 'kimnng' },
-  41904070: { id: 41904070, login: 'jomtl' },
-  */
-
-  // old blocks
-  10710596: { id: 10710596, login: 'Shmeve' },
-  2364632: { id: 2364632, login: 'ngrigoriev' },
-  32909203: { id: 32909203, login: 'KevinMwa' },
-  39062756: { id: 39062756, login: 'mferderber' },
-  37561740: { id: 37561740, login: 'wperron' },
-  39343849: { id: 39343849, login: 'mic79' },
-  3188853: { id: 3188853, login: 'fredericplante' },
-  17690259: { id: 17690259, login: 'Sterithium' },
-  14837233: { id: 14837233, login: 'lucasdeschamps' },
-  16139396: { id: 16139396, login: 'kiwikik' },
-  36643607: { id: 36643607, login: 'carla-doyle' },
-  36831295: { id: 36831295, login: 'vbordalo' },
-  2625886: { id: 2625886, login: 'ggirard07' },
+  719796: { id: 719796, login: 'mathdeziel' },
   2342405: { id: 2342405, login: 'mirsaeedi' },
-  18427998: { id: 18427998, login: 'xanderhades' },
-  22452192: { id: 22452192, login: 'srsohn' },
-  13615467: { id: 13615467, login: 'VinceLambert' },
-  14182238: { id: 14182238, login: 'marechal-p' },
-  14793470: { id: 14793470, login: 'benjimaclellan' },
-  9895004: { id: 9895004, login: 'rfarouni' },
-  11354804: { id: 11354804, login: 'diordonez' },
-  11360131: { id: 11360131, login: 'coreyarms' },
-  11820997: { id: 11820997, login: 'ninkle' },
-  12099546: { id: 12099546, login: 'zulander1' },
-  12940089: { id: 12940089, login: 'enadeau' },
-  12969088: { id: 12969088, login: 'myaa2913' },
-  39284029: { id: 39284029, login: 'Nillikis' },
-  39303895: { id: 39303895, login: 'cedguill03' }
+  2364632: { id: 2364632, login: 'ngrigoriev' },
+  2625886: { id: 2625886, login: 'ggirard07' },
+  3092838: { id: 3092838, login: 'gaudreaujacksoncharles' },
+  3188853: { id: 3188853, login: 'fredericplante' },
+  5373064: { id: 5373064, login: 'banctilrobitaille' },
+  5426916: { id: 5426916, login: 'robotustra' },
+  5527618: { id: 5527618, login: 'aLoneStrider' },
+  5906650: { id: 5906650, login: 'PapaIbrahimaSene' },
+  6231440: { id: 6231440, login: 'jacobrs' },
+  6589067: { id: 6589067, login: 'bananemure' },
+  7339076: { id: 7339076, login: 'dannycolin' },
+  7477547: { id: 7477547, login: 'SKhoo' },
+  7544240: { id: 7544240, login: 'DonavanMartin' },
+  7634110: { id: 7634110, login: 'Makabey' },
+  9411699: { id: 9411699, login: 'drew7721' },
+  9595728: { id: 9595728, login: 'dt-rush' },
+  10172301: { id: 10172301, login: 'tommyforlini' },
+  10481637: { id: 10481637, login: 'polyponik' },
+  10710596: { id: 10710596, login: 'Shmeve' },
+  11246769: { id: 11246769, login: 'hallshouse' },
+  11443637: { id: 11443637, login: 'Paramethod' },
+  11564379: { id: 11564379, login: 'igelinas' },
+  11967869: { id: 11967869, login: 'platonik93' },
+  13917350: { id: 13917350, login: 'Pat559' },
+  16087328: { id: 16087328, login: '0x72D0' },
+  16311107: { id: 16311107, login: 'Varmoes' },
+  16513007: { id: 16513007, login: 'Kalahee' },
+  16640625: { id: 16640625, login: 'aboulfad' },
+  16748284: { id: 16748284, login: 'WrightLiam' },
+  16778995: { id: 16778995, login: 'offol' },
+  16808836: { id: 16808836, login: 'CheesyBurrito' },
+  18422723: { id: 18422723, login: 'alishobeiri' },
+  21031246: { id: 21031246, login: '2b32dn' },
+  21992112: { id: 21992112, login: 'Smockwal' },
+  22141664: { id: 22141664, login: 'CharlesJebalitherson' },
+  22298876: { id: 22298876, login: 'pldelisle' },
+  24725635: { id: 24725635, login: 'sebastiancastroobando' },
+  24948522: { id: 24948522, login: 'hfakouri' },
+  25057940: { id: 25057940, login: 'vaquierm' },
+  25408746: { id: 25408746, login: 'cgtcc' },
+  25458003: { id: 25458003, login: 'elliottl' },
+  29841989: { id: 29841989, login: 'mounirch13' },
+  31779709: { id: 31779709, login: 'yingjie-xu' },
+  31940190: { id: 31940190, login: 'MaximeGoyette' },
+  33403539: { id: 33403539, login: 'arnaveenkumar' },
+  34556464: { id: 34556464, login: 'MikaelAbehsera' },
+  35231902: { id: 35231902, login: 'rebeccagarner' },
+  35378512: { id: 35378512, login: 'john412smith' },
+  35871757: { id: 35871757, login: '0xc0ffeee' },
+  37561740: { id: 37561740, login: 'wperron' },
+  43446063: { id: 43446063, login: 'Vaatik' },
+  53022164: { id: 53022164, login: 'Ben3ayed' }
 }
 
 const gotUser = (user) => {
