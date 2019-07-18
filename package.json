@@ -20,7 +20,7 @@
     "p-retry": "^2.0.0",
     "p-throttle": "^1.1.0",
     "pify": "^4.0.0",
-    "rollodeqc-gh-search-users-all": "^0.7.0"
+    "rollodeqc-gh-search-users-all": "^1.0.1"
   },
   "devDependencies": {
     "standard": "^11.0.1"
