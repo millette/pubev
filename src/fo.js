@@ -3,7 +3,7 @@
 // npm
 const searchUsers = require('rollodeqc-gh-search-users-all')
 const hq = require('hyperquest')
-const JSONStream = require('jsonstream')
+const JSONStream = require('jsonstream2')
 const pThrottle = require('p-throttle')
 const pick = require('lodash.pick')
 // const pRetry = require('p-retry')

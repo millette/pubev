@@ -5,7 +5,7 @@ const fs = require('fs')
 
 // npm
 const hq = require('hyperquest')
-const JSONStream = require('jsonstream')
+const JSONStream = require('jsonstream2')
 const range = require('lodash.range')
 const omitDeepLodash = require('omit-deep-lodash')
 const pify = require('pify')
@@ -68,7 +68,14 @@ const om1 = [
 
 let userId
 const etags = {}
-const fix = (v) => omitDeepLodash(v, om1)
+const fix = (v) => {
+  // console.error('fix', v)
+  // console.error('fix', v)
+  const ret =  omitDeepLodash(v, om1)
+  // console.error('fix', ret)
+  return ret
+}
+
 const mkdirImp = pify(fs.mkdir)
 const writeFile = pify(fs.writeFile.bind(fs))
 
@@ -115,7 +122,10 @@ const writeEventFile = (d) => {
 }
 
 const gotEvent = (d) => writeEventFile(d)
-  .then((x) => x && x.added && console.log(JSON.stringify(x)))
+  .then((x) => {
+    // console.log(x.added, x.createdAt)
+    return x && x.added && console.log(JSON.stringify(x))
+  })
   .catch(console.error)
 
 const pscb = (p, err, res) => {
@@ -130,6 +140,7 @@ const pageStream = (p) => {
   }
   if (etags[p]) { headers['if-none-match'] = etags[p] }
   const u = `https://api.github.com/user/${userId}/received_events/public?page=${p}`
+  // console.log('u', u, headers, p)
   return hq(u, { headers }, pscb.bind(null, p))
 }
 
@@ -162,6 +173,7 @@ const idFromToken = () => new Promise((resolve, reject) =>
 const run = () => idFromToken()
   .then((id) => {
     userId = id
+    // console.log('userID', userId)
     doPages(10)
     return setInterval(doPages, 3 * 60 * 1000)
   })
