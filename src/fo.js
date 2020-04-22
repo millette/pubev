@@ -32,17 +32,25 @@ const location = [
 
 const query = { o: { location, type: 'user' }, order: 'asc', sort: 'joined' }
 
+
+
+
+
 // blocked by these users
 const following = {
   457296: { id: 457296, login: 'michaelpaquette' },
   615440: { id: 615440, login: 'danielricci' },
+  695884: { id: 695884, login: 'jyallard' },
   505688: { id: 505688, login: 'psyomn' },
   719796: { id: 719796, login: 'mathdeziel' },
+  772200: { id: 772200, login: 'TehWan' },
   2342405: { id: 2342405, login: 'mirsaeedi' },
   2364632: { id: 2364632, login: 'ngrigoriev' },
   2625886: { id: 2625886, login: 'ggirard07' },
   3092838: { id: 3092838, login: 'gaudreaujacksoncharles' },
+  3133230: { id: 3133230, login: 'elabrosse' },
   3188853: { id: 3188853, login: 'fredericplante' },
+  4009658: { id: 4009658, login: 'avanier' },
   5373064: { id: 5373064, login: 'banctilrobitaille' },
   5426916: { id: 5426916, login: 'robotustra' },
   5527618: { id: 5527618, login: 'aLoneStrider' },
@@ -53,6 +61,9 @@ const following = {
   7477547: { id: 7477547, login: 'SKhoo' },
   7544240: { id: 7544240, login: 'DonavanMartin' },
   7634110: { id: 7634110, login: 'Makabey' },
+  8344518: { id: 8344518, login: 'ramonfigueiredopessoa' },
+  8515329: { id: 8515329, login: 'francoismajor' },
+  9040037: { id: 9040037, login: 'peteowe' },
   9411699: { id: 9411699, login: 'drew7721' },
   9595728: { id: 9595728, login: 'dt-rush' },
   10172301: { id: 10172301, login: 'tommyforlini' },
@@ -62,36 +73,62 @@ const following = {
   11443637: { id: 11443637, login: 'Paramethod' },
   11564379: { id: 11564379, login: 'igelinas' },
   11967869: { id: 11967869, login: 'platonik93' },
+  12948917: { id: 12948917, login: 'doureyd' },
   13917350: { id: 13917350, login: 'Pat559' },
+  14794270: { id: 14794270, login: 'alireza-mht' },
   16087328: { id: 16087328, login: '0x72D0' },
   16311107: { id: 16311107, login: 'Varmoes' },
   16513007: { id: 16513007, login: 'Kalahee' },
   16640625: { id: 16640625, login: 'aboulfad' },
   16748284: { id: 16748284, login: 'WrightLiam' },
   16778995: { id: 16778995, login: 'offol' },
-  16808836: { id: 16808836, login: 'CheesyBurrito' },
+  16808836: { id: 16808836, login: 'wagrenier' },
   18422723: { id: 18422723, login: 'alishobeiri' },
+  19217606: { id: 19217606, login: 'viralbthakar' },
+  20607667: { id: 20607667, login: 'joeljpoulin' },
   21031246: { id: 21031246, login: '2b32dn' },
   21992112: { id: 21992112, login: 'Smockwal' },
-  22141664: { id: 22141664, login: 'CharlesJebalitherson' },
+  22141664: { id: 22141664, login: 'charles-augustin' },
   22298876: { id: 22298876, login: 'pldelisle' },
   24725635: { id: 24725635, login: 'sebastiancastroobando' },
   24948522: { id: 24948522, login: 'hfakouri' },
   25057940: { id: 25057940, login: 'vaquierm' },
   25408746: { id: 25408746, login: 'cgtcc' },
   25458003: { id: 25458003, login: 'elliottl' },
+  25696312: { id: 25696312, login: 'antoinegag' },
+  26132545: { id: 26132545, login: 'manubou333' },
+  26719450: { id: 26719450, login: 'Asher0004' },
+  29762210: { id: 29762210, login: 'jscarle' },
   29841989: { id: 29841989, login: 'mounirch13' },
   31779709: { id: 31779709, login: 'yingjie-xu' },
   31940190: { id: 31940190, login: 'MaximeGoyette' },
+  32078663: { id: 32078663, login: 'baubrun' },
   33403539: { id: 33403539, login: 'arnaveenkumar' },
   34556464: { id: 34556464, login: 'MikaelAbehsera' },
   35231902: { id: 35231902, login: 'rebeccagarner' },
   35378512: { id: 35378512, login: 'john412smith' },
+  35785070: { id: 35785070, login: 'bengattathadjali' },
   35871757: { id: 35871757, login: '0xc0ffeee' },
+  36673635: { id: 36673635, login: 'TheBigWez' },
   37561740: { id: 37561740, login: 'wperron' },
+  38964736: { id: 38964736, login: 'anon176' },
   43446063: { id: 43446063, login: 'Vaatik' },
-  53022164: { id: 53022164, login: 'Ben3ayed' }
+  45702415: { id: 45702415, login: 'Rizvi-004' },
+  48306674: { id: 48306674, login: 'devodev' },
+  48453533: { id: 48453533, login: 'mathewsd3' },
+  53022164: { id: 53022164, login: 'Ben3ayed' },
+  53938196: { id: 53938196, login: 'charles-gaudreau-jackson' },
+  56414802: { id: 56414802, login: 'map555' },
+  57112013: { id: 57112013, login: 'jlidou' },
+  58282047: { id: 58282047, login: 'gaudreaujacksoncharles' },
+  60830727: { id: 60830727, login: 'Justin-Klein' },
+  61982490: { id: 61982490, login: 'pf-malandry' },
 }
+
+
+
+
+
 
 const gotUser = (user) => {
   following[user.id] = { id: user.id, login: user.login }
