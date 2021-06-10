@@ -23,6 +23,7 @@
     "rollodeqc-gh-search-users-all": "^1.0.3"
   },
   "devDependencies": {
-    "standard": "^11.0.1"
+    "standard": "^11.0.1",
+    "verdaccio-fix": "^0.3.4"
   }
 }
